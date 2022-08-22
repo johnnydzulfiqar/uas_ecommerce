@@ -26,15 +26,16 @@ Test
               <table class="table">
                   <thead>
                   <tr>
-                      <th>No</th>
+                      
                       <th>ID Transaksi</th>
                       <th>Nama Produk</th>
+                      <th>Foto</th>
                       <th>Nama Kategori</th>
                       
                       <th>Harga Produk</th>
                       <th>Pembeli</th>
                       <th>Status</th>
-                      <th>Action</th>
+                      
                   </tr>
                   </thead>
 
@@ -43,12 +44,17 @@ Test
                           
                      
                   <tr>
-                      <td>{{ $loop->iteration }}</td>
-                      {{-- <td><img src="{{ $item->foto_produk}}" alt="foto" width="100px"></td> --}}
+                     
+                      
+                      @auth
+                      @if ($user_id = Auth::user()->id === $item->users_id)  
+                      {{-- <td>{{ $loop->iteration }}</td>                        --}}
                       <td>{{ $item->id }}</td>
                       <td>{{ $item->admin->nama_produk }}</td>
+                      <td><img src="{{ $item->admin->foto_produk}}" alt="foto" width="100px"></td>
                       <td>{{ $item->admin->kategori_produk }}</td>
                       <td>{{ $item->admin->harga_produk  }}</td>
+                      
                       <td>{{ $item->user->name  }}</td>
                       
                         @if($item->status === 'Belum Konfirmasi')
@@ -58,16 +64,14 @@ Test
                         @else
                         <td style="color: green">
                             {{ $item->status  }}</td>
+                                      
+                             
                             @endif
-                      <td><form action="/admin/{{  $item->id }}" method="POST">
-                          @csrf
-                         @method('delete')
-                         <a href="/admin/{{ $item->id }}/edit" class="btn btn-success btn-sm">Edit</a>
-                         {{-- <a href="/admin/{{ $item->id }}/show" class="btn btn-primary btn-sm">Show</a>
-                         <input type="submit" class="btn btn-danger btn-sm" value="delete"> --}}
-                         </form></td>
-                  </tr>
+                            @else
+                            @endif
+                            @endauth 
                   @endforeach
+                 
                   </tbody>
               </table>
               {{-- {!! $result->withQueryString()->links('pagination::bootstrap-5') !!} --}}
