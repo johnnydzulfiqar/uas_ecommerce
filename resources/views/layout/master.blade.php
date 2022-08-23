@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Landrick - Admin Dashboard Template</title>
+        <title>E-Commerce UAS Unikom</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
         <meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern" />
@@ -52,7 +52,7 @@
                     <div class="layout-specing">
                         <div class="d-flex align-items-center justify-content-between">
                             <div>
-                                <h6 class="text-muted mb-1">Welcome back, Cristina!</h6>
+                                <h6 class="text-muted mb-1">Welcome back, {{ Auth::user()->name }}!</h6>
                                 <h5 class="mb-0">@yield('judul')</h5>
                             </div>
                            

@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('judul')
-Show
+Show User
 @endsection
 @section('content')
 <main style="margin-top: 70px">

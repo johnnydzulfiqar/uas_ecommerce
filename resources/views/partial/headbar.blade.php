@@ -13,12 +13,7 @@
             </a>
             <div class="search-bar p-0 d-none d-md-block ms-2">
                 <div id="search" class="menu-search mb-0">
-                    <form role="search" method="get" id="searchform" class="searchform">
-                        <div>
-                            <input type="text" class="form-control border rounded" name="s" id="s" placeholder="Search Keywords...">
-                            <input type="submit" id="searchsubmit" value="Search">
-                        </div>
-                    </form>
+                   
                 </div>
             </div>
         </div>
@@ -37,21 +32,21 @@
                     <button type="button" class="btn btn-soft-light dropdown-toggle p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png" class="avatar avatar-ex-small rounded" alt=""></button>
                     <div class="dropdown-menu dd-menu dropdown-menu-end shadow border-0 mt-3 py-3" style="min-width: 200px;">
-                        <a class="dropdown-item d-flex align-items-center text-dark pb-3" href="/login">
+                        
                             {{-- <img src="assets/images/client/05.jpg" class="avatar avatar-md-sm rounded-circle border shadow" alt=""> --}}
                             <div class="flex-1 ms-2">
                                 @guest
-                               <a href="/login" class="d-block">Anda Belum Login</a>
+                               <p  class="d-block">Anda Belum Login</p>
                                @endguest
                                 @auth
-                                <span class="d-block">{{ Auth::user()->name }}</span>
+                                <p class="d-block">{{ Auth::user()->name }}</p>
                                
                                     
                                 @endauth
                                
                                 
                             </div>
-                        </a>
+                       
                         @auth
                             
                         

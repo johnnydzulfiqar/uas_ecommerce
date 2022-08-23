@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('judul')
-Test
+Index User
 @endsection
 @section('content')
        <style>

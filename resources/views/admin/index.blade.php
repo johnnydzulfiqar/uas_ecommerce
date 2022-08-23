@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('judul')
-Test
+Index Admin
 @endsection
 @section('content')
 <main style="margin-top: 70px">

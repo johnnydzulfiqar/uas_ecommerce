@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('judul')
-Transaksi 
+Transaksi User 
 @endsection
 @section('content')
 <div class="container">
