@@ -82,10 +82,10 @@ Show
                                     </div><!--end col-->
                                 </div><!--end row-->
     
-                                <div class="mt-4">
+                                {{-- <div class="mt-4">
                                     <a href="javascript:void(0)" class="btn btn-primary">Shop Now</a>
                                     <a href="shop-cart.html" class="btn btn-soft-primary ms-2">Add to Cart</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div><!--end col-->
                     </div><!--end row-->

@@ -25,12 +25,12 @@
             <li><a href="/user/indextransaksi"><i class="ti ti-shopping-cart me-2"></i>Transaksi User</a></li> 
             @endif
             @endauth
-            @auth
+            {{-- @auth
             @if (Auth::check() && Auth::user()->name == "Admin")
             <li><a href="/user/indextransaksi"><i class="ti ti-user me-2"></i>Menu User</a></li> 
             @else
             @endif
-            @endauth
+            @endauth --}}
     @endauth
     @guest
     <ul class="sidebar-menu">

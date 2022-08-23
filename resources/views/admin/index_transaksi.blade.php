@@ -32,6 +32,7 @@ Transaksi Status
                       <th>Nama Kategori</th>
                       
                       <th>Harga Produk</th>
+                      <th>Stok</th>
                       <th>Pembeli</th>
                       <th>Status</th>
                       <th>Action</th>
@@ -49,6 +50,7 @@ Transaksi Status
                       <td>{{ $item->admin->nama_produk }}</td>
                       <td>{{ $item->admin->kategori_produk }}</td>
                       <td>{{ $item->admin->harga_produk  }}</td>
+                      <td>{{ $item->admin->stok  }}</td>
                       <td>{{ $item->user->name  }}</td>
                       
                         @if($item->status === 'Belum Konfirmasi')
@@ -62,8 +64,14 @@ Transaksi Status
                       <td><form action="/admin/{admin}/transaksi" method="post" enctype="multipart/form-data">
                         @csrf 
                         <input style="display: none;" type="text" hidden name="id" value="{{ $item->id }}" class="form-control">
+                        <input style="display: none;" type="text" hidden name="admin_id" value="{{ $item->admin->id }}" class="form-control">
+                        <input style="display: none;" type="text" hidden name="stok" value="{{ $item->admin->stok-1 }}" class="form-control">
                         <input style="display: none;" type="text" hidden name="status" value="Sudah Konfirmasi" class="form-control">
+                    @if ($item->status == 'Belum Konfirmasi')
                     <button type="submit" class="btn btn-success">Konfirmasi</button>
+                    @else
+                    @endif
+                       
                 </form>  </td>
                   </tr>
                   @endforeach

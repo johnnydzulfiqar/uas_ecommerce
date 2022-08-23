@@ -53,7 +53,7 @@ Show
                                 </div>
                                 
                                 <h5 class="mt-4">Overview :</h5>
-                                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero exercitationem, unde molestiae sint quae inventore atque minima natus fugiat nihil quisquam voluptates ea omnis. Modi laborum soluta tempore unde accusantium.</p>
+                                <p class="text-muted">{{ $user->deskripsi_produk }}</p>
                             
                                 <ul class="list-unstyled text-muted">
                                     <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span> Digital Marketing Solutions for Tomorrow</li>
@@ -63,7 +63,7 @@ Show
     
                                 <div class="row mt-4">
                                     <div class="col-lg-6 col-12">
-                                        <div class="d-flex align-items-center">
+                                        {{-- <div class="d-flex align-items-center">
                                             <h6 class="mb-0">Your Size:</h6>
                                             <ul class="list-unstyled mb-0 ms-3">
                                                 <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-soft-primary">S</a></li>
@@ -71,7 +71,7 @@ Show
                                                 <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="btn btn-icon btn-soft-primary">L</a></li>
                                                 <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="btn btn-icon btn-soft-primary">XL</a></li>
                                             </ul>
-                                        </div>
+                                        </div> --}}
                                     </div><!--end col-->
     
                                     <div class="col-lg-6 col-12 mt-4 mt-lg-0">
@@ -85,7 +85,7 @@ Show
         @csrf 
         <input style="display: none;" type="text" hidden name="admin_id" value="{{ $user->id }}" class="form-control">
         <input style="display: none;" type="text" hidden name="status" value="Belum Konfirmasi" class="form-control">
-    <button type="submit" class="btn btn-primary">Beli</button>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Beli</button>
 </form>  
                         </div><!--end col-->
                     </div><!--end row-->
@@ -137,10 +137,10 @@ Show
                                             <td class="text-muted">Cotton</td>
                                         </tr>
 
-                                        <tr>
+                                        {{-- <tr>
                                             <td>Size</td>
                                             <td class="text-muted">S, M, L, XL, XXL</td>
-                                        </tr>
+                                        </tr> --}}
                                     </tbody>
                                 </table>
                             </div>
@@ -153,7 +153,7 @@ Show
                                                 <div class="d-flex justify-content-between">
                                                     <div class="d-flex align-items-center">
                                                         <a class="pe-3" href="#">
-                                                            <img src="assets/images/client/01.jpg" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
+                                                            <img src="{{ asset('layout/assets/images/client/01.jpg') }}" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
                                                         </a>
                                                         <div class="flex-1 commentor-detail">
                                                             <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark media-heading">Lorenzo Peterson</a></h6>
@@ -177,7 +177,7 @@ Show
                                                 <div class="d-flex justify-content-between">
                                                     <div class="d-flex align-items-center">
                                                         <a class="pe-3" href="#">
-                                                            <img src="assets/images/client/02.jpg" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
+                                                            <img src="{{ asset('layout/assets/images/client/02.jpg') }}" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
                                                         </a>
                                                         <div class="flex-1 commentor-detail">
                                                             <h6 class="mb-0"><a href="javascript:void(0)" class="media-heading text-dark">Tammy Camacho</a></h6>
@@ -257,7 +257,7 @@ Show
                                                         </ul>
                                                     </a>
                                                 </div>
-                                                <div class="col-md-12 mt-3">
+                                                {{-- <div class="col-md-12 mt-3">
                                                     <div class="mb-3">
                                                         <label class="form-label">Your Review:</label>
                                                         <div class="form-icon position-relative">
@@ -265,9 +265,9 @@ Show
                                                             <textarea id="message" placeholder="Your Comment" rows="5" name="message" class="form-control ps-5" required=""></textarea>
                                                         </div>
                                                     </div>
-                                                </div><!--end col-->
+                                                </div><!--end col--> --}}
             
-                                                <div class="col-lg-6">
+                                                {{-- <div class="col-lg-6">
                                                     <div class="mb-3">
                                                         <label class="form-label">Name <span class="text-danger">*</span></label>
                                                         <div class="form-icon position-relative">
@@ -290,7 +290,7 @@ Show
                                                 <div class="col-md-12">
                                                     <div class="send d-grid">
                                                         <button type="submit" class="btn btn-primary">Submit</button>
-                                                    </div>
+                                                    </div> --}}
                                                 </div><!--end col-->
                                             </div><!--end row-->
                                         </form><!--end form-->

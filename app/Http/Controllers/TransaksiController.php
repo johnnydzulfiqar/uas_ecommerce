@@ -90,10 +90,12 @@ class TransaksiController extends Controller
 
         $transaksi = Transaksi::find($request->id);
         $transaksi->status = $request->status;
-        // dd($transaksi);
         $transaksi->save();
+        $stok = Admin::find($request->admin_id);
+        $stok->stok = $request->stok;
+        $stok->save();
+        // dd($transaksi);
         return redirect('/admin/indextransaksi');
-        Transaksi::create();
     }
 
     /**
