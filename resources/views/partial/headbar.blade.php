@@ -36,7 +36,7 @@
                             {{-- <img src="assets/images/client/05.jpg" class="avatar avatar-md-sm rounded-circle border shadow" alt=""> --}}
                             <div class="flex-1 ms-2">
                                 @guest
-                               <p  class="d-block">Anda Belum Login</p>
+                               <a href="login" class="d-block">Anda Belum Login</a>
                                @endguest
                                 @auth
                                 <p class="d-block">{{ Auth::user()->name }}</p>

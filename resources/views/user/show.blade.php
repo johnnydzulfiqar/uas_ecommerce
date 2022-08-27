@@ -81,12 +81,16 @@ Show User
                                         </div>
                                     </div><!--end col-->
                                 </div><!--end row-->
+                                @if( $user->stok > 0) 
     <form action="/user/transaksi" method="post" enctype="multipart/form-data">
         @csrf 
         <input style="display: none;" type="text" hidden name="admin_id" value="{{ $user->id }}" class="form-control">
         <input style="display: none;" type="text" hidden name="status" value="Belum Konfirmasi" class="form-control">
     <button type="submit" class="btn btn-primary btn-lg btn-block">Beli</button>
 </form>  
+@else 
+<H2 style="color: red"> Produk Habis Tidak bisa anda Beli</H2>
+@endif
                         </div><!--end col-->
                     </div><!--end row-->
                 </div>

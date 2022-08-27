@@ -29,7 +29,11 @@ Transaksi User
             <div class="row">
                 <div class="text-center">
                     <h1>Receipt</h1>
-                <h1>Terima Kasih Telah Berbelanja Silahkan Segara Melakukan Konfirmasi Ke Admin/Seller</h1>
+                <h1>Terima Kasih Telah Berbelanja Silahkan Segara Melakukan Konfirmasi Ke Admin/Seller
+                    <br>
+                    <a href="indextransaksi" class="badge-success">Halaman Transaksi</a>
+                </h1>
+                
             </div>
         </div>
     </div>

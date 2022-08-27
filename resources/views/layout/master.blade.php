@@ -52,7 +52,14 @@
                     <div class="layout-specing">
                         <div class="d-flex align-items-center justify-content-between">
                             <div>
+                                @guest
+                                <h6 class="text-muted mb-1">Welcome back, Guest!</h6>
+                                @endguest
+                                @auth
+                                    
+                                
                                 <h6 class="text-muted mb-1">Welcome back, {{ Auth::user()->name }}!</h6>
+                                @endauth
                                 <h5 class="mb-0">@yield('judul')</h5>
                             </div>
                            

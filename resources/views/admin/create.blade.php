@@ -68,7 +68,7 @@ Create Barang
           <div class="mb-3 row">
             <label for="deskripsi_produk" class="col-sm-2 col-form-label">Deskripsi Produk</label>
             <div class="col-sm-5">
-                <textarea  type="text" value="{{ old('deskripsi_produk', @$admin->deskripsi_produk) }}" class="form-control mb-3" name="deskripsi_produk" id="deskripsi_produk" placeholder="Deskripsi Produk"></textarea>
+                <input  type="text" value="{{ old('deskripsi_produk', @$admin->deskripsi_produk) }}" class="form-control mb-3" name="deskripsi_produk" id="deskripsi_produk" placeholder="Deskripsi Produk"></textarea>
             </div>
           <div class="mb-3 row">
               <div class="col-sm-5 offset-sm-2">
