@@ -6,6 +6,8 @@ M Naufa Dzulfiqar
 TPEC - 3
 
 ## paket && vendor
+Laravel
+Composer
 node.js
 bootstrap
 
